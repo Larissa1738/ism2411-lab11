@@ -73,3 +73,19 @@ print("Customer dictionary keys only:")
 
 for key in customer:
     print(key)
+    # Exercise 5: Customer tier discounts
+
+tier_discounts = {
+    "bronze": 0.00,
+    "silver": 0.05,
+    "gold": 0.10,
+    "platinum": 0.15
+}
+
+discount_rate = tier_discounts.get(customer["tier"], 0)
+purchase_price = 200
+final_price = purchase_price * (1 - discount_rate)
+
+print("Customer Tier:", customer["tier"])
+print("Discount Rate:", discount_rate)
+print("Final Price: $", final_price)
