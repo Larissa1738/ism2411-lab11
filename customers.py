@@ -89,3 +89,23 @@ final_price = purchase_price * (1 - discount_rate)
 print("Customer Tier:", customer["tier"])
 print("Discount Rate:", discount_rate)
 print("Final Price: $", final_price)
+# Exercise 6: Apply discounts to multiple customers
+
+customers = [
+    {"name": "Alice", "tier": "gold"},
+    {"name": "Bob", "tier": "silver"},
+    {"name": "Charlie", "tier": "platinum"}
+]
+
+purchase_price = 300
+
+for customer in customers:
+    discount_rate = tier_discounts.get(customer["tier"], 0)
+    discount_amount = purchase_price * discount_rate
+
+    print(
+        customer["name"],
+        customer["tier"],
+        "Discount: $",
+        discount_amount
+    )
