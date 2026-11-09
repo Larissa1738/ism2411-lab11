@@ -109,3 +109,19 @@ for customer in customers:
         "Discount: $",
         discount_amount
     )
+
+    # Exercise 7: Nested dictionaries and low stock alerts
+
+catalog = {
+    "Widget A": {"price": 9.99, "stock": 150},
+    "Gadget C": {"price": 49.99, "stock": 8}
+}
+
+for product, details in catalog.items():
+    if details["stock"] < 20:
+        print(
+            product,
+            "LOW STOCK:",
+            details["stock"],
+            "units remaining"
+        )
