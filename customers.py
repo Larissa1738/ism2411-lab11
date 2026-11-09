@@ -43,3 +43,14 @@ print("Customer Tier:", customer["tier"])
 print("Year-to-Date Spend:", customer["ytd_spend"])
 
 print("Full Customer Dictionary:", customer)
+
+# Exercise 2: Modify the customer dictionary
+
+customer["phone"] = "813-555-0123"
+print("After adding phone:", customer)
+
+customer["tier"] = "platinum"
+print("After updating tier:", customer)
+
+del customer["email"]
+print("After deleting email:", customer)
