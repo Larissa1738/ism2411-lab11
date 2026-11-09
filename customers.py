@@ -62,3 +62,14 @@ try:
     print("Email using brackets:", customer["email"])
 except KeyError:
     print("Email key does not exist.")
+    # Exercise 4: Loop through dictionary items
+
+print("Customer dictionary items:")
+
+for key, value in customer.items():
+    print(f"{key}: {value}")
+
+print("Customer dictionary keys only:")
+
+for key in customer:
+    print(key)
