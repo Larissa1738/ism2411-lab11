@@ -54,3 +54,11 @@ print("After updating tier:", customer)
 
 del customer["email"]
 print("After deleting email:", customer)
+# Exercise 3: Safe and unsafe dictionary lookups
+
+print("Email using get():", customer.get("email", "no email on file"))
+
+try:
+    print("Email using brackets:", customer["email"])
+except KeyError:
+    print("Email key does not exist.")
