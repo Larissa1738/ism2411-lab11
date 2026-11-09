@@ -125,3 +125,24 @@ for product, details in catalog.items():
             details["stock"],
             "units remaining"
         )
+
+        # Exercise 8: Sales summary by region
+
+transactions = [
+    {"region": "South", "amount": 300},
+    {"region": "North", "amount": 150},
+    {"region": "South", "amount": 200}
+]
+
+sales_summary = {}
+
+for transaction in transactions:
+    region = transaction["region"]
+    amount = transaction["amount"]
+
+    sales_summary[region] = sales_summary.get(region, 0) + amount
+
+print("Sales Summary by Region:")
+
+for region in sorted(sales_summary):
+    print(region, ":", sales_summary[region])
